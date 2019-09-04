@@ -1,0 +1,66 @@
+div.above-layer.clearfix
+  div.brief.pull-right
+    div.b1.clearfix
+      div.pull-left
+        div.title
+          span.pos [#{profile.position_name}]
+          span.name #{profile.name}
+          span.no #{profile.id}号候选人
+        div.salary
+          span.cur-salary
+            em 当前薪资 :
+            | ￥#{profile.salary_current}
+          span.expect-salary
+            em 期望薪资 :
+            | ￥#{profile.salary_expect}
+      div.pull-right
+        div.outerpack
+          span.fee
+            i.icon.icon-Y
+            | 外包费 ￥#{profile.dispatch_fee}/月
+          span.explain
+            i.icon.icon-what
+            | 资费说明
+          div.fee-popup.hide
+            h4 外包费构成
+            p 人员成本 : 人员薪资+企业应缴社保公积金
+            p 管理费 : 人员成本的25%
+            p 增值税税率 : 7%
+            div.foot-pad
+        div.recruit
+          span.fee
+            i.icon.icon-Y
+            | 招聘费 ￥#{profile.recruit_fee}
+          span.explain
+            i.icon.icon-what
+            | 资费说明
+          div.fee-popup.hide
+            h4 招聘费构成
+            p ￥#{profile.recruit_fee}=2个月的人员薪资
+            div.foot-pad
+div.under-layer.clearfix
+  div.brief.pull-right
+    ul.clearfix
+      li.pull-left.sex
+        span #{profile.sex}
+        em 性别
+      li.pull-left
+        span #{profile.age}
+        em 年龄
+      li.pull-left
+        span #{profile.education}
+        em 学历
+      li.pull-left
+        span #{profile.worktime}年
+        em 工作经验
+      li.pull-left.address
+        span #{profile.forward_city}
+        em 期望地点
+div.portrait
+  div.frame
+    if profile.sex === '男'
+      img(src='#{profile.picture || "/img/candidate_man.png"}')
+    else
+      img(src='#{profile.picture || "/img/candidate_woman.png"}')
+    if profile.is_right === '1'
+      i.icon.icon-jyjm-green

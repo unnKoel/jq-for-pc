@@ -1,0 +1,33 @@
+div#header
+  div.header-wraps
+    div.container
+      div.cmp-header
+        div.clearfix.header-wrap
+          a.pull-left.this-is-logo(title='即派')
+            img.logo(src='/img/header-logo.png')
+            img.new(src='/img/go-new.png')
+          div.pull-right.this-is-myGee#this-is-myGee
+            p#sign-wrapper.sign-wrapper
+              a.wrapper-login(href='/login.html') 登录
+              a.wrapper-register(href='/signup.html') 注册
+            #mygee-wrapper.clearfix
+              div.split
+              img.account-icon(src="/img/account.png")
+              a.a-myGee#a-myGee(href='javascript:;' title='个人中心') 个人中心
+              i.dot
+              i.arrow
+              ul.account-center.hide
+                li
+                  a(href='/setting.html' title='账户设置') 账号设置
+                li
+                  a(href='/talentshome.html' title='我的人才库') 我的人才库
+                  i.number.pull-right 0
+                li
+                  a(href='/orders.html' title='我的订单') 我的订单
+          ul.pull-right.this-is-menu
+            li
+              a.talents(href='/talents.html' title='租人才') 租人才
+            li
+              a.service(href='/service.html' title='派服务') 派服务
+            li
+              a.offshore(href='/offshore.html' title='离岸外包') 离岸外包

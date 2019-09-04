@@ -1,0 +1,28 @@
+each talent in talents
+  div.item.clearfix(data-profile=talent.profile_id)
+    div.check.pull-left
+      input.size-x.ck-member(type='checkbox')
+    div.person-info.pull-left
+      div.facicon.pull-left
+        if talent.sex === '男'
+          img.header(src='#{talent.pic || "/img/candidate_man.png"}')
+        else
+          img.header(src='#{talent.pic || "/img/candidate_woman.png"}')
+        if talent.is_right === 1
+          i.icon.icon-ji
+      div.info.pull-left
+        div.name-info
+          span #{talent.name}
+        div.personal-info
+          span #{talent.sex} |&nbsp
+          span #{talent.age} |&nbsp
+          span #{talent.education} |&nbsp
+          span #{talent.forward_city} |&nbsp
+          span #{talent.worktime}年经验 |&nbsp
+          span #{talent.is_leave === '是' ? '已离职' : '目前在职'}
+        div.comments-info.word-omit(title=talent.appraisal)
+          span 期望薪资 ￥#{talent.salary_expect}
+    div.functions.pull-left
+      span.pull-left #{talent.position_name}
+    div.operation.pull-left
+      a(href='#',title='删除').btn.btn-delt 删除

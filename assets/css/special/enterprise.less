@@ -1,0 +1,306 @@
+@import "../gt-kit";
+
+.banner {
+  height: 200px;
+  min-width: 1000px;
+  background: url(/img/company-back.png) no-repeat;
+
+  .container {
+
+    text-align: left;
+
+
+    .company-icon {
+      height: 200px;
+      width: 140px;
+
+      img {
+        height: 140px;
+        width: 140px;
+        margin-top: 30px;
+        border-radius: 100%;
+      }
+    }
+    .company-info {
+      height: 200px;
+      width: 829px;
+      color: #ffffff;
+
+      .company-name {
+        margin-top: 45px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .company-history {
+        width: 822px !important;
+        word-break: break-all;
+        font-size: 14px;
+        line-height: 25px;
+        max-height: 80px;
+      }
+      .company-history + .slimScrollBar {
+        background-color: #ffffff !important;
+      }
+      .company-history + .slimScrollRail {
+        background-color: #ffffff !important;
+      }
+    }
+  }
+}
+
+.area-header {
+  margin-top: 28px;
+  margin-left: -1px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666666;
+  i.icon {
+    width: 30px;
+  }
+  i.icon-border {
+    height: 18px;
+    margin-top: -4px;
+    background: url(/img/icon-border.png) left 0 no-repeat;
+  }
+  i.icon-th-arrow {
+    height: 18px;
+    background: url(/img/nav-condition-arrow.png) center 4px no-repeat;
+  }
+}
+
+.company-left-side {
+  width: 725px;
+  margin-top: 33px;
+  margin-bottom: 130px;
+  padding-bottom: 50px;
+  border: 2px solid #f4f4f4;
+  border-radius: 5px;
+
+  .company-profile {
+
+    div.profile {
+      width: 380px;
+      height: 165px;
+      margin-left: 30px;
+      margin-top: 20px;
+      line-height: 26px;
+      font-size: 14px;
+      color: #666666;
+
+      p {
+        width: 370px !important;
+        word-break: break-all;
+      }
+    }
+
+    .imgprofile {
+      margin-top: 20px;
+      margin-right: 30px;
+      img {
+        width: 266px;
+        height: 161px;
+        border-radius: 9px;
+      }
+    }
+  }
+
+  .company-history {
+
+
+    .time-line {
+      // max-height: 260px;
+    }
+
+    li.history {
+      margin-top: 28px;
+      font-size: 14px;
+      p.history-time {
+        position: relative;
+
+        i.icon-td-dot {
+          height: 18px;
+          width: 32px;
+          background: url(/img/icon-table-dot.png) right 5px no-repeat;
+        }
+
+        span.time {
+          margin-left: 10px;
+          margin-right: 20px;
+          font-weight: bold;
+          color: #32a4e6;
+        }
+        span.title {
+          display: inline-block;
+          position: relative;
+          top: 1px;
+          font-weight: bold;
+          color: #666666;
+          //margin-right: 20px;
+          width: 580px;
+        }
+      }
+      p.history-profile {
+        margin-top: 16px;
+        margin-left: 120px;
+        margin-right: 20px;
+        line-height: 20px;
+        color: #666666;
+      }
+    }
+  }
+
+  .company-address {
+
+    .address-list {
+      width: 380px;
+      //height: 160px;
+    }
+
+    li.address {
+      margin-top: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      p.address-profile {
+
+        i.icon-td-dot {
+          height: 18px;
+          width: 32px;
+          background: url(/img/icon-table-dot.png) right 5px no-repeat;
+        }
+
+        span.name {
+          margin-left: 10px;
+          margin-right: 20px;
+          font-weight: bold;
+          color: #666666;
+        }
+      }
+
+      .address-select {
+        color: #32a4e6 !important;
+      }
+
+      p.address-detail {
+        margin-top: 8px;
+        margin-left: 42px;
+        color: #666666;
+      }
+    }
+
+    div.map {
+      margin-top: 20px;
+      margin-right: 30px;
+      cursor: pointer;
+      img {
+        width: 300px;
+        height: 180px;
+        border-radius: 9px;
+      }
+    }
+  }
+}
+
+.company-right-side {
+  width: 250px;
+  //min-height: 850px;
+  margin-top: 33px;
+  margin-bottom: 130px;
+  padding-bottom: 50px;
+  background-color: #fafafa;
+  border-radius: 5px;
+
+  .area-header {
+    margin-left: 0 ;
+  }
+
+  .company-base {
+    p {
+      margin-top: 12px;
+      margin-left: 32px;
+      font-size: 14px;
+      color: #666666;
+    }
+  }
+
+  .company-manager {
+
+    .manager-list {
+      .manager {
+        text-align: center;
+        font-size: 14px;
+        color: #666666;
+
+        .manager-icon {
+          margin-top: 20px;
+          img {
+            width: 125px;
+            height: 125px;
+            border-radius: 100%;
+          }
+        }
+        .manager-name {
+          margin-top: 20px;
+          font-weight: bold;
+          width: 250px;
+        }
+        .manager-position {
+          margin-top: 12px;
+          margin-bottom: 10px;
+          width: 250px;
+        }
+        .manager-profile {
+          margin-left: 20px;
+          margin-right: 18px;
+          line-height: 25px;
+          text-align: left;
+          width: 210px;
+          max-height: 120px;
+        }
+
+      }
+    }
+
+
+
+    .lSSlideOuter .lSPager.lSpg>li a {
+      height: 7px;
+      width: 7px;
+      background-color: #e1e1e1;
+    }
+
+    .lSSlideOuter .lSPager.lSpg>li.active a, .lSSlideOuter .lSPager.lSpg>li:hover a {
+      height: 7px;
+      width: 7px;
+      background-color: #65bbec;
+    }
+
+    .lSAction>.lSNext {
+      display: none;
+    }
+
+    .lSAction>.lSPrev {
+      display: none;
+    }
+  }
+
+  .company-tag {
+
+    .tag-list {
+      padding-left: 28px;
+      padding-top: 9px;
+      li.tag {
+        max-width: 166px;
+        margin-right: 13px;
+        margin-top: 11px;
+        padding: 12px 16px;
+        border: 1px solid #e1e1e1;
+        border-radius: 25px;
+        font-size: 14px;
+        color: #666666;
+        cursor: default;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "404.min.js": "404-d41d8cd98f.min.js",
+  "500.min.js": "500-d41d8cd98f.min.js",
+  "aboutus.min.js": "aboutus-5fd5585831.min.js",
+  "cases.min.js": "cases-d8f2ed985c.min.js",
+  "clause.min.js": "clause-19c3313820.min.js",
+  "enterprise.min.js": "enterprise-0f3552ccd9.min.js",
+  "getpassword.min.js": "getpassword-0d073dff8f.min.js",
+  "index.min.js": "index-8bb8b4b8fc.min.js",
+  "login.min.js": "login-b403796426.min.js",
+  "offshore.min.js": "offshore-efdcb188b4.min.js",
+  "offshoreGoods.min.js": "offshoreGoods-349ff758a2.min.js",
+  "orders.min.js": "orders-2af3bef8b6.min.js",
+  "profile.min.js": "profile-db87aa8634.min.js",
+  "service.min.js": "service-facebbe3dd.min.js",
+  "setting.min.js": "setting-1f6564748d.min.js",
+  "signup.min.js": "signup-264af2e448.min.js",
+  "talents.min.js": "talents-d7b3497d74.min.js",
+  "talentshome.min.js": "talentshome-368160f582.min.js"
+}

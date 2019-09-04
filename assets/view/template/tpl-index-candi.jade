@@ -1,0 +1,52 @@
+div.clearfix
+  each candi,index in candis
+    if (index + 1) % 4 !== 0
+      div.card.pull-left(data-id='#{candi.profile_id}')
+        div.wrap
+          div.avatar
+            if candi.is_right === '1'
+              i.icon.icon-ji
+            if candi.sex === '男'
+              img(src='#{candi.pic || "/img/candidate_man.png"}',alt='头像')
+            else
+              img(src='#{candi.pic || "/img/candidate_woman.png"}',alt='头像')
+          div.desc
+            h2.word-omit #{candi.name}
+            div.fee.word-omit
+              span 期望薪资
+              em ￥#{candi.salary_expect}
+            div.three-sign
+              span.age.word-omit #{candi.age}岁
+              span.year.word-omit #{candi.worktime}年
+              span.address.word-omit #{candi.city}
+            ul.dots
+              li.word-omit #{candi.education}学历
+              li.word-omit 英语能力#{candi.english}
+              li.word-omit 沟通能力#{candi.communicate}
+              li.word-omit Office能力#{candi.office}
+          a.btn(data-id='#{candi.profile_id}') 立即预约
+    else
+      div.card.pull-left.four(data-id='#{candi.profile_id}')
+        div.wrap
+          div.avatar
+            if candi.is_right === '1'
+              i.icon.icon-ji
+            if candi.sex === '男'
+              img(src='#{candi.pic || "/img/candidate_man.png"}',alt='头像')
+            else
+              img(src='#{candi.pic || "/img/candidate_woman.png"}',alt='头像')
+          div.desc
+            h2.word-omit #{candi.name}
+            div.fee.word-omit
+              span 期望薪资
+              em ￥#{candi.salary_expect}
+            div.three-sign
+              span.age.word-omit #{candi.age}岁
+              span.year.word-omit #{candi.worktime}年
+              span.address.word-omit #{candi.city}
+            ul.dots
+              li.word-omit #{candi.education}学历
+              li.word-omit 英语能力#{candi.english}
+              li.word-omit 沟通能力#{candi.communicate}
+              li.word-omit Office能力#{candi.office}
+          a.btn(data-id='#{candi.profile_id}') 立即预约

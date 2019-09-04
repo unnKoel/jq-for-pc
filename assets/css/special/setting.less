@@ -1,0 +1,226 @@
+@import "../gt-kit";
+
+.banner {
+  height: 90px;
+  min-width: 1000px;
+  background: url(/img/tab-back.png) no-repeat;
+
+  .container {
+    height: 90px;
+    text-align: center;
+
+    .left-arrow {
+      display: inline-block;
+      width: 65px;
+      height: 16px;
+      background: url(/img/tab-left.png) center 8px no-repeat;
+    }
+    .right-arrow {
+      display: inline-block;
+      width: 65px;
+      height: 16px;
+      background: url(/img/tab-right.png) center 8px no-repeat;
+    }
+
+    .time-info {
+      display: inline-block;
+      line-height: 90px;
+      margin-left: 10px;
+      margin-right: 10px;
+      color: #ffffff;
+    }
+  }
+}
+
+#page {
+  background: #f7f7f7;
+}
+
+#footer {
+  background: #fff;
+  .cmp-footer {
+    background: #fff;
+  }
+}
+
+.main {
+  .container {
+    padding: 25px 0;
+  }
+  .main-pane {
+    box-shadow: 1px 3px 10px 1px rgba(230, 231, 235, 0.5);
+  }
+  .wrap {
+    background: #fff;
+    padding: 0 20px;
+    border-radius: 5px;
+
+    ul {
+      .portrait {
+        .func-zone {
+          img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+          }
+        }
+        .portraitUpload {
+          position: relative;
+          overflow: hidden;
+          display: block;
+          input {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            opacity: 0;
+            -ms-filter: 'alpha(opacity=0)';
+            font-size: 200px !important;
+            direction: ltr;
+            cursor: pointer;
+          }
+        }
+      }
+      li {
+        height: 79px;
+        line-height: 79px;
+        border-bottom: 1px solid #f4f4f4;
+        .caption {
+          width: 165px;
+          text-indent: 18px;
+        }
+        .pull-right {
+          width: 784px;
+          .func-zone {
+            width: 630px;
+            margin-right: 50px;
+            height: 79px;
+            font-size: 14px;
+          }
+
+          .action {
+            text-align: right;
+            width: 100px;
+            a {
+              cursor: pointer;
+              color: #b0b0b3;
+              font-size: 14px;
+              margin-right: 5px;
+            }
+            //a:hover {
+            //  color: @main-color;
+            //}
+            .icon {
+              margin-left: 5px;
+              vertical-align: baseline;
+            }
+          }
+        }
+        .portrait {
+          .func-zone {
+            img {
+              margin-top: 10px;
+            }
+          }
+        }
+
+        .name, .pos {
+          .edit {
+            input {
+              height: 38px;
+              line-height: 38px;
+            }
+            .back-error {
+              color: @fail-color;
+              margin-left: 10px;
+              font-size: 12px;
+            }
+            .action {
+              a {
+                color: @main-color;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .popup-global {
+    display: none;
+    .content {
+      .wrap {
+        padding: 30px 50px 0;
+      }
+    }
+    .input-item {
+      position: relative;
+      margin-bottom: 20px;
+      input {
+        width: 360px;
+      }
+
+      .error {
+        position: absolute;
+        color: @fail-color;
+        font-size: 12px;
+        top: -16px;
+      }
+    }
+
+    .verify {
+      position: relative;
+      .error {
+        position: absolute;
+        color: @fail-color;
+        font-size: 12px;
+        top: -16px;
+      }
+      input {
+        width: 250px;
+      }
+      .btn {
+        width: 96px;
+        border-radius: 5px;
+        border: 2px solid @main-color;
+        margin-left: 10px;
+        color: @main-color;
+        font-weight: bold;
+      }
+    }
+
+    p.back-error {
+      color: @fail-color;
+      height: 20px;
+      line-height: 20px;
+      margin-top: 13px;
+      margin-bottom: 16px;
+      font-size: 12px;
+    }
+  }
+
+  #qr {
+    display: none;
+    .qr-frame {
+      position: relative;
+      background: #fff;
+      border: 2px solid #f0f0f0;
+      width: 156px;
+      height: 156px;
+      border-radius: 5px;
+      img {
+        width: 154px;
+        height: 154px;
+      }
+      .icon-angle {
+        background: url('/img/setting-qr-angle.png') no-repeat scroll;
+        position: absolute;
+        right: -11px;
+        bottom: -2px;
+        width: 11px;
+        height: 9px;
+      }
+    }
+  }
+}

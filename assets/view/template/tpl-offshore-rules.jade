@@ -1,0 +1,14 @@
+div.rule-desc-wrap
+  h2
+    span.vertical
+    span 服务内容
+    i.icon.icon-arrows-declivity
+  ul.rules
+    each promote in promotes
+      li.clearfix
+        div.time.pull-left
+          em 租用时长 :
+          span #{promote.duration}
+        div.benefit.pull-right
+          em 优惠比率 :
+          span #{promote.promote}

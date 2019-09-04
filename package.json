@@ -1,0 +1,37 @@
+{
+  "name": "ypt-shop",
+  "private": true,
+  "version": "0.0.1",
+  "description": "A project for shopping",
+  "repository": "https://git.coding.net/common_c/ypt-shop.git",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.4",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^3.2.2",
+    "gulp-data": "^1.2.1",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-jade": "^1.1.0",
+    "gulp-less": "^3.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.1.0",
+    "gulp-rev-collector": "^1.0.5",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-sync": "^0.1.4",
+    "gulp-uglify": "^2.0.0",
+    "gulp-sequence": "^0.4.6",
+    "imagemin-pngquant": "^5.0.0",
+    "path": "^0.12.7",
+    "vinyl-file": "^2.0.0",
+    "gulp.spritesmith ": "^6.4.0"
+  },
+  "dependencies": {
+    "vinyl-file": "^2.0.0"
+  }
+}

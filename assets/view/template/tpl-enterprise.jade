@@ -1,0 +1,80 @@
+div.banner
+  div.container.clearfix
+    div.company-icon.pull-left
+      img(src=enterprise.logo)
+    div.company-info.pull-right
+      div.company-name #{enterprise.name}
+      div.company-history(title=enterprise.desc) #{enterprise.desc}
+div#erp.erp.container.clearfix
+  div.company-left-side.pull-left
+    div.company-profile.clearfix
+      div.area-header
+        i.icon.icon-border
+        | 公司简介
+        i.icon.icon-th-arrow
+      div.profile.pull-left
+        p
+          if enterprise.pic_list[0]
+            | #{enterprise.pic_list[0].describe}
+      div.imgprofile.pull-right
+        if enterprise.pic_list[0]
+          img(src=enterprise.pic_list[0].pic)
+        else
+          img    
+    div.company-history
+      div.area-header
+        i.icon.icon-border
+        | 发展历程
+        i.icon.icon-th-arrow
+      ul.time-line.clearfix
+        each history,index in enterprise.history_list
+          li.history
+            p.history-time
+              i.icon.icon-td-dot
+              span.time #{history.event_time}
+              span.title.word-omit(title=history.identification) #{history.identification}
+            p.history-profile #{history.describe}
+    div.company-address.clearfix
+      div.area-header
+        i.icon.icon-border
+        | 公司地址
+        i.icon.icon-th-arrow
+      ul.address-list.pull-left
+        each address,index in enterprise.address_list
+          li.address(data-city=address.city_name,data-address=address.address)
+            p.address-profile
+              i.icon.icon-td-dot
+              span.name #{address.city_name}
+            p.word-omit.address-detail(title=address.address) #{address.address}
+      div.map.pull-right
+        img(src='')
+  div.company-right-side.pull-right
+    div.company-base
+      div.area-header
+        i.icon.icon-border
+        | 基本信息
+        i.icon.icon-th-arrow
+      p 阶段：#{enterprise.period_name}
+      p 规模：#{enterprise.scale_name}
+      p 坐标：#{enterprise.company_city}
+    div.company-manager
+      div.area-header
+        i.icon.icon-border
+        | 管理团队
+        i.icon.icon-th-arrow
+      ul.manager-list
+        each manager,index in enterprise.manager_list
+          li.manager
+            div.manager-icon
+              img(src=manager.pic)
+            div.manager-name.word-omit(title=manager.name) #{manager.name}
+            div.manager-position.word-omit(title=manager.type_name) #{manager.type_name}
+            div.manager-profile(title=manager.describe) #{manager.describe}
+    div.company-tag
+      div.area-header
+        i.icon.icon-border
+        | 公司标签
+        i.icon.icon-th-arrow
+      ul.tag-list.clearfix
+        each tag,index in enterprise.tag_list
+          li.word-omit.tag.pull-left(title=tag.tag_name) #{tag.tag_name}

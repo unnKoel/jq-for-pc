@@ -1,0 +1,34 @@
+extends partials/layoutb
+
+block title
+  title 即派-登录即派
+
+block style
+  link(href='/css/special/login.css',rel='stylesheet')
+
+block content
+  div.container
+    div.this-is-login.clearfix
+      div.loginR
+        form.login-form
+          p.hide.warn-mess
+          div.samelogin
+            input.input-same.input#input-id(type='text' placeholder='请输入账号名（手机号）' maxlength=11)
+            i.account
+          div.samelogin
+            input.input-same.input#input-word(type='password' placeholder='请输入密码' maxlength=20)
+            i.password
+          div.rempass.clearfix
+            div.pull-left.rember
+              input.input-rember#input-rember(type='checkbox')
+              span.forget 记住密码
+            p.pull-right
+              a.a-forget(href='getpassword.html' title='忘记密码') 忘记密码?
+          a.btn.btn-main.login(href='javascript:;' title='登录') 登录
+        //p.this-is-attention.clearfix.none
+        //  i.pull-left
+        //  span.pull-left 关注并绑定服务号，及时接受推荐消息
+
+block script
+  script(src='/js/component/jquery.form.checkbox.js')
+  script(src='/js/login.js')

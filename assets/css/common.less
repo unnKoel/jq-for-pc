@@ -1,0 +1,68 @@
+/**
+  基础公共样式
+*/
+@import "normalize";
+@import "reset";
+
+body {
+  font: 16px/1 '微软雅黑', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}
+
+/* Remove IE's “clear field” X button */
+
+input::-ms-clear, input::-ms-reveal {
+  display: none;
+}
+
+/*ie 支持fixed 防止抖动*/
+
+body {
+  _background-attachment: fixed;
+  _background-image: url(about:blank);
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.hide {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+img[src=''], img:not([src]) {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.word-omit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

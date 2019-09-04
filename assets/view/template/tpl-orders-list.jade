@@ -1,0 +1,132 @@
+each order in orders
+  if order.type === 1
+    div.item
+      h2.title
+        span.time #{order.add_time}
+        span.num
+          span 订单号 :
+          em #{order.number}
+      div.content.clearfix
+        div.pull-left.profiles
+          ul
+            each profile,index in order.profile_list
+              li(data-pid='#{profile.profile_id}')
+                div.wrap
+                  if(index !== order.profile_list.length - 1)
+                    div.profile.clearfix
+                      div.pull-left
+                        div.portrait
+                          div.frame
+                            if profile.sex === '男'
+                              img(src='#{profile.pic || "/img/candidate_man.png"}')
+                            else
+                              img(src='#{profile.pic || "/img/candidate_woman.png"}')
+                            if profile.is_right
+                              i.icon.icon-ji
+                      div.pull-right
+                        div.row-1
+                          span #{profile.profile_name}
+                        div.row-2
+                          span.something
+                            span.sex #{profile.sex} |
+                            span.age #{profile.age} |
+                            span.edu #{profile.education} |
+                            span.address #{profile.city} |
+                            span.year #{profile.worktime}年经验
+                          span.functions.word-omit #{profile.position_name}
+                          span.money
+                          span.status
+                            b #{order.message}
+                        div.row-3
+                          span.remark.clearfix
+                            span.title.pull-left 期望薪资
+                            em.pull-left.word-omit ￥#{profile.expect_salary}
+                  else
+                    div.profile.clearfix.no-border
+                      div.pull-left
+                        div.portrait
+                          div.frame
+                            if profile.sex === '男'
+                              img(src='#{profile.pic || "/img/candidate_man.png"}')
+                            else
+                              img(src='#{profile.pic || "/img/candidate_woman.png"}')
+                            if profile.is_right
+                              i.icon.icon-ji
+                      div.pull-right
+                        div.row-1
+                          span #{profile.profile_name}
+                        div.row-2
+                          span.something
+                            span.sex #{profile.sex} |
+                            span.age #{profile.age} |
+                            span.edu #{profile.education} |
+                            span.address #{profile.city} |
+                            span.year #{profile.worktime}年经验
+                          span.functions.word-omit #{profile.position_name}
+                          span.money
+                          span.status
+                            b #{order.message}
+                        div.row-3
+                          span.remark.clearfix
+                            span.title.pull-left 期望薪资
+                            em.pull-left.word-omit ￥#{profile.expect_salary}
+  else if order.type === 2
+    div.item.wait.pai
+      h2.title
+        span.time #{order.add_time}
+        span.num
+          span 订单号 :
+          em #{order.number}
+      div.content.clearfix
+        div.pull-left.profiles
+          ul
+            li
+              div.wrap
+                div.profile.clearfix
+                  div.pull-left
+                    div.portrait
+                      div.frame
+                        img(src='/img/orders-portrait-default.png')
+                  div.pull-right
+                    div.row-1
+                      b 派服务
+                    div.row-2
+                      span.something
+                        b 该订单正在等待客服致电，请您耐心等待！
+                      span.status
+                        b 等待客服致电
+  else if order.type === 3
+    div.item.wait.offshore
+      h2.title
+        span.time #{order.add_time}
+        span.num
+          span 订单号 :
+          em #{order.number}
+      div.content.clearfix
+        div.pull-left.profiles
+          ul
+            li
+              div.wrap
+                div.profile.clearfix
+                  div.pull-left
+                    div.portrait
+                      div.frame
+                        img(src='/img/orders-portrait-offshore.png')
+                  div.pull-right
+                    div.row-1
+                      b [离岸外包]招聘专员
+                    div.row-2.clearfix
+                      div.something.pull-left
+                        div.pull-left.city
+                          span 所在城市 :
+                          em #{order.profile_list.city_name}
+                        div.pull-left.nums
+                          span 租用数量 :
+                          em #{order.profile_list.rent_number}人
+                        div.pull-left.times
+                          span 租用时长 :
+                          em #{order.profile_list.rent_month}个月
+                      div.pull-left.money.word-omit
+                        span ￥#{order.sum_price}
+                      div.pull-left
+                        b #{order.message}

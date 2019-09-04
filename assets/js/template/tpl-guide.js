@@ -1,0 +1,7 @@
+function tplGuide(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+
+buf.push("<div class=\"guide-popup\"><div class=\"header\"><i class=\"icon icon-close-white close\"></i><i class=\"icon icon-water-drop\"></i><i class=\"icon icon-water-drop-big\"></i><i class=\"icon icon-fur\"></i><h2 class=\"brand\"><img src=\"/img/guide-gee.png\"/></h2></div><div class=\"content\"><div class=\"steps\"><h3>招聘快人一步</h3><ul class=\"clearfix\"><li class=\"pull-left phone\"><div><i class=\"icon icon-phone\"></i></div><p class=\"one\">Step1 在线约人</p><p>1小时反馈</p></li><li class=\"pull-left\"><i class=\"icon icon-lead-arrows\"></i></li><li class=\"pull-left person\"><div><i class=\"icon icon-blue-person\"></i></div><p class=\"one\">Step2 闪电面试</p><p>24小时面试</p></li><li class=\"pull-left\"><i class=\"icon icon-lead-arrows\"></i></li><li class=\"pull-left post\"><div><i class=\"icon icon-tie\"></i></div><p class=\"one\">Step3 极速到岗</p><p>3天到岗</p></li></ul></div><div class=\"our-service\"><h3>招聘、外包</h3><div class=\"goto clearfix\"><div class=\"pull-left\"><p>提供灵活多变的用工方式，有效规避企业用工风险</p></div><div class=\"pull-right\"><i class=\"icon icon-lead-arrows\"></i><a href=\"/talents.html\" class=\"btn btn-main\">马上约</a></div></div></div><div class=\"about-offshore\"><h3>离岸外包</h3><div class=\"goto clearfix\"><div class=\"pull-left\"><p>即派员工以离岸形式远程、全职支持您的人力资源招聘工作</p></div><div class=\"pull-right\"><i class=\"icon icon-lead-arrows\"></i><a href=\"/offshore.html\" class=\"btn btn-main\">去看看</a></div></div></div></div></div>");;return buf.join("");
+}

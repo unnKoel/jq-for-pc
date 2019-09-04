@@ -1,0 +1,95 @@
+form
+  ul
+    li
+      div.cur-account.clearfix
+        span.caption.pull-left 当前账号
+        div.pull-right
+          div.clearfix
+            div.func-zone.pull-left #{user.phone}
+            div.action.pull-right
+              a.logout 退出账号
+                i.icon.icon-double-arrows
+    li
+      div.portrait.clearfix
+        span.caption.pull-left 头像
+        div.pull-right
+          div.clearfix
+            div.func-zone.pull-left
+              if(user.avatar)
+                img(src='#{user.avatar}',alt='用户头像')
+              else
+                img(src='/img/account.png',alt='用户头像')
+            div.action.pull-right
+              a.portraitUpload 重新上传
+                i.icon.icon-double-arrows
+                input(type='file',name='avatar',data-url='/hr/user/editAvatar',id='portraitUpload')
+    li
+      div.name.clearfix
+        span.caption.pull-left 姓名
+        div.pull-right
+          div.clearfix.display
+            span.func-zone.pull-left.word-omit #{user.name}
+            span.action.pull-right
+              a 修改姓名
+                i.icon.icon-double-arrows
+          div.clearfix.edit.hide
+            span.func-zone.pull-left
+              input(name='name',type='text',value='#{user.name}')
+              span.back-error.hidden * 错误提示信息
+            span.action.pull-right
+              a 保存
+    li
+      div.pos.clearfix
+        span.caption.pull-left 职位
+        div.pull-right
+          div.clearfix.display
+            span.func-zone.pull-left.word-omit #{user.position_name}
+            span.action.pull-right
+              a 修改职位
+                i.icon.icon-double-arrows
+          div.clearfix.edit.hide
+            span.func-zone.pull-left
+              input(name='position',type='text',value='#{user.position_name}')
+              span.back-error.hidden * 错误提示信息
+            span.action.pull-right
+              a 保存
+    li
+      div.password.clearfix
+        span.caption.pull-left 密码
+        div.pull-right
+          div.clearfix
+            span.func-zone.pull-left 已设置密码
+            span.action.pull-right
+              a.edit-pwd 重置密码
+                i.icon.icon-double-arrows
+    li
+      div.phone.clearfix
+        span.caption.pull-left 手机号
+        div.pull-right
+          div.clearfix
+            span.func-zone.pull-left #{user.phone}
+            span.action.pull-right
+              a.edit-phone 修改手机号
+                i.icon.icon-double-arrows
+    li
+      div.email.clearfix
+        span.caption.pull-left 邮箱
+        div.pull-right
+          div.clearfix
+            span.func-zone.pull-left #{user.email}
+            span.action.pull-right
+              a.edit-email 修改邮箱
+                i.icon.icon-double-arrows
+    li
+      div.wechat.clearfix
+        span.caption.pull-left 微信账号
+        div.pull-right
+          div.clearfix
+            if user.is_bind_wechat !== 0
+              span.func-zone.pull-left 已绑定微信账号
+            else
+              span.func-zone.pull-left 未绑定微信账号
+            span.action.pull-right
+              if user.is_bind_wechat === 0
+                a 微信绑定
+                  i.icon.icon-double-arrows

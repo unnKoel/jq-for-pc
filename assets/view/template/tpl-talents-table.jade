@@ -1,0 +1,51 @@
+each talent in talents
+  li.item(data-item=talent.id)
+    div.up-info
+      span #{talent.name}
+      span #{talent.sex}
+      span #{talent.age}
+      span #{talent.position}
+      span #{talent.worktime}年
+      span #{talent.education}
+      span #{talent.city}
+      span #{talent.salary_month_expect}
+      span #{talent.salary_month_current}
+      span #{talent.last_update}
+    div.down-info.clearfix
+      div.pull-left
+        if talent.sex === '男'
+          img(src='#{talent.pic || "/img/candidate_man.png"}')
+        else
+          img(src='#{talent.pic || "/img/candidate_woman.png"}')
+        p #{talent.arrival}
+        if talent.is_right === '1'
+          i.icon.icon-ji
+      div.pull-right
+        div.school
+          em 毕业院校 :
+          if talent.edu_list && talent.edu_list.length
+            span #{talent.edu_list[0].begin_time}至#{talent.edu_list[0].end_time} |&nbsp;
+            span #{talent.edu_list[0].school_name} |&nbsp;
+            span #{talent.edu_list[0].major_name}
+        div.job-experience.clearfix
+          em.pull-left 工作经历 :
+          if talent.job_list && talent.job_list.length
+            ul.pull-left
+              li.one
+                div.title
+                  span #{talent.job_list[0].begin_time}至#{talent.job_list[0].end_time} |&nbsp;
+                  span #{talent.job_list[0].company_name} |&nbsp;
+                  span #{talent.job_list[0].department} |&nbsp;
+                  span #{talent.job_list[0].position}
+                p.content(title='#{talent.job_list[0].duty}') #{talent.job_list[0].duty}
+              if talent.job_list[1]
+                li.sec
+                  div.title
+                    span #{talent.job_list[1].begin_time}至#{talent.job_list[1].end_time} |&nbsp;
+                    span #{talent.job_list[1].company_name} |&nbsp;
+                    span #{talent.job_list[1].department} |&nbsp;
+                    span #{talent.job_list[1].position}
+                  p
+        div.comments
+          em.pull-left 顾问评语 :
+          p.word-omit.pull-left #{talent.appraisal}

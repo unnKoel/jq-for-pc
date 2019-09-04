@@ -1,0 +1,35 @@
+div.popup-global#send
+  div.header
+    h2 转发简历
+    a.close
+  div.content
+    div.wrap
+      div.write
+        p
+          if colleagues.length > 0
+            span.select-colleague
+              i.icon.icon-person-green
+              | 选择我的同事
+        form
+          div.colleague
+            div.input-item
+              input(type='text',placeholder='请输入您同事的邮箱',name='email',maxlength='50')
+              i.icon.icon-email
+            p.error.hide * 错误信息
+          div.remark
+            div.input-item
+              input(type='text',placeholder='添加备注后，系统会记录为您的同事，方便下次操作...',name='name',maxlength='100')
+              i.icon.icon-pen
+            p.error.hide * 错误信息
+          p.back-error.hidden * 后台错误信息
+      div.selector.hide
+        ul
+          each colleague in colleagues
+            li
+              input(type='checkbox')
+              span.name #{colleague.name}
+              span.email #{colleague.mail}
+        p.back-error.hidden * 后台错误信息
+  div.footer
+    a.btn.btn-hollow 取消
+    a.btn.btn-main 发送

@@ -1,0 +1,72 @@
+.spinner-sprite, .spinner .decrease, .spinner .decrease[disabled], .spinner .increase, .spinner .value, .spinner .value.passive {
+  //background: url('/img/spinner-sf0d5bd965d.png') no-repeat
+}
+
+.spinner {
+  height: 24px;
+  width: 108px;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  overflow: hidden;
+  *zoom: 1;
+  //-webkit-box-shadow: 0 3px 3px -4px #aaa;
+  //-moz-box-shadow: 0 3px 3px -4px #aaa;
+  //box-shadow: 0 3px 3px -4px #aaa
+}
+
+.spinner button, .spinner .value {
+  text-align: center;
+  display: block;
+  float: left;
+  height: 100%;
+  line-height: 25px;
+  margin: 0
+}
+
+.spinner button {
+  border: none;
+  width: 26px;
+  //color: #e5312a;
+  background: #f0f0f0;
+  font: 20px Arial bold;
+  //color: #999;
+  padding: 0;
+  outline: none
+}
+
+.spinner .decrease {
+  //background-position: 0 -50px;
+  cursor: pointer;
+  border-right: 1px solid #b3b3b3;
+  //text-indent: -10000px
+
+}
+
+.spinner .decrease[disabled] {
+  //background-position: 0 -75px;
+  cursor: default
+}
+
+.spinner .increase {
+  //background-position: 0 0;
+  cursor: pointer;
+  border-left: 1px solid #b3b3b3;
+  //text-indent: -10000px
+}
+
+.spinner .value {
+  //background-position: 0 -100px;
+  width: 56px;
+  border: none;
+  //font-family: Arial;
+  padding: 0;
+}
+
+.spinner .value.passive {
+  //background-position: 0 -25px;
+  color: #919191
+}
+
+.spinner input.value:focus {
+  border: none;
+}

@@ -1,0 +1,24 @@
+each page,key in pages
+  div.one-page
+    ul.clearfix
+      each client,index in page
+        if (index + 1) % 3 !== 0 && index < 3
+          li.card.pull-left.first-row(data-id='#{client.company_id}')
+            div.wrap
+              img(src='#{client.logo}',alt='client brand logo')
+              p.word-omit #{client.name}
+        else if (index + 1) % 3 === 0 && index < 3
+          li.card.pull-left.first-row.three(data-id='#{client.company_id}')
+            div.wrap
+              img(src='#{client.logo}',alt='client brand logo')
+              p.word-omit #{client.name}
+        else if (index + 1) % 3 !== 0 && index >= 3
+          li.card.pull-left(data-id='#{client.company_id}')
+            div.wrap
+              img(src='#{client.logo}',alt='client brand logo')
+              p.word-omit #{client.name}
+        else
+          li.card.pull-left.three(data-id='#{client.company_id}')
+            div.wrap
+              img(src='#{client.logo}',alt='client brand logo')
+              p.word-omit #{client.name}

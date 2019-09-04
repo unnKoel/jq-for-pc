@@ -1,0 +1,49 @@
+div.popup-global#order
+  div.header
+    h2 预约面试
+    a.close
+  div.content
+    div.wrap
+      div.brief.clearfix
+        div.pull-left.left-layer
+          div.portrait
+            div.frame
+              if profile.sex === '男'
+                img(src='#{profile.picture || "/img/candidate_man.png"}',alt='候选人头像')
+              else
+                img(src='#{profile.picture || "/img/candidate_woman.png"}',alt='候选人头像')
+              if profile.is_right === '1'
+                i.icon.icon-jyjm-green
+        div.pull-right.right-layer
+          div.b1.clearfix
+            div.pull-left
+              span.pos [#{profile.position_name}]
+              span.name #{profile.name}
+            div.pull-right
+              span.fee 期望薪资：￥#{profile.salary_expect}
+          div.b2
+            span #{profile.age}岁
+            span.separate |
+            span #{profile.education}
+            span.separate |
+            span #{profile.city}
+            span.separate |
+            span 经验#{profile.worktime}年
+            span.separate |
+            span #{profile.is_leave === '是' ? '已离职' : '目前在职'}
+          div.b3.clearfix
+            span 英语#{profile.english_level}
+            span.separate |
+            span Office能力#{profile.office_level}
+            span.separate |
+            span 沟通能力#{profile.communicate_level}
+      div.bottom-some.clearfix
+        p.pull-left * 立即预约候选人，我们将在#{profile.time}给您反馈
+        div.pull-right.clause
+          input.size-x(type='checkbox')
+          span.link 同意
+            a(href='/pact.html') 《即派服务条款》
+  div.footer
+    a.btn.btn-main
+      i.icon.icon-edit
+      | 确定预约

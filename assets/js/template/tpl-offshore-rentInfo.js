@@ -1,0 +1,7 @@
+function tplOffshoreRentInfo(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+;var locals_for_with = (locals || {});(function (rentInfo) {
+buf.push("<div class=\"wrap\"><h2 class=\"clearfix title\"><span class=\"pull-left\">[即派离岸外包服务]招聘专员</span><span class=\"pull-right\">服务费 : ￥" + (jade.escape((jade_interp = rentInfo.price_base) == null ? '' : jade_interp)) + "元/月</span></h2><ul class=\"infos\"><li class=\"city\"><em>所在城市 :</em><span>" + (jade.escape((jade_interp = rentInfo.city_name) == null ? '' : jade_interp)) + "</span></li><li class=\"nums\"><em>租用数量 :</em><span>" + (jade.escape((jade_interp = rentInfo.rent_number) == null ? '' : jade_interp)) + "人</span></li><li class=\"times\"><em>租用时长 :</em><span>" + (jade.escape((jade_interp = rentInfo.rent_month) == null ? '' : jade_interp)) + "个月</span></li></ul><div class=\"sum clearfix\"><span class=\"sum-label pull-left\">合计</span><span class=\"sum-value pull-right\"><span>服务费 :</span><em>￥" + (jade.escape((jade_interp = rentInfo.price_final) == null ? '' : jade_interp)) + "</em><span>元</span></span></div></div>");}.call(this,"rentInfo" in locals_for_with?locals_for_with.rentInfo:typeof rentInfo!=="undefined"?rentInfo:undefined));;return buf.join("");
+}

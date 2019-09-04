@@ -1,0 +1,23 @@
+{
+  "component/jquery.spinner.css": "component/jquery-943eeeb99c.spinner.css",
+  "component/jquery.webui-popover.css": "component/jquery-e673f17df8.webui-popover.css",
+  "component/lightslider.css": "component/lightslider-519b5db25b.css",
+  "special/aboutus.css": "special/aboutus-b16330eaac.css",
+  "special/cases.css": "special/cases-21ee6deca3.css",
+  "special/clause.css": "special/clause-af0bd89524.css",
+  "special/enterprise.css": "special/enterprise-da4873a66f.css",
+  "special/error.css": "special/error-73190ff168.css",
+  "special/getpassword.css": "special/getpassword-0c5ad0e9a1.css",
+  "special/index.css": "special/index-5e5f236c52.css",
+  "special/login.css": "special/login-d5736b6be0.css",
+  "special/offshore.css": "special/offshore-577ba689cb.css",
+  "special/offshoreGoods.css": "special/offshoreGoods-aabbb9da6e.css",
+  "special/orders.css": "special/orders-96c100b115.css",
+  "special/pact.css": "special/pact-efbb0961f4.css",
+  "special/profile.css": "special/profile-fbd55f2585.css",
+  "special/service.css": "special/service-7a334499a3.css",
+  "special/setting.css": "special/setting-4c48cbd8ff.css",
+  "special/signup.css": "special/signup-301c5f4f84.css",
+  "special/talents.css": "special/talents-92880e0109.css",
+  "special/talentshome.css": "special/talentshome-ccd501e9a4.css"
+}

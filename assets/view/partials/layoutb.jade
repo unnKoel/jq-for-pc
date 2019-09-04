@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    block meta
+    link(rel='shortcut icon', href='/img/ico.png', type='image/x-icon')
+    block title
+    block style
+  body
+    include ./headerb.jade
+    div#page
+      block content
+    include ./footer.jade
+    script(type="text/javascript" src='http://tajs.qq.com/stats?sId=62471291&b.js' charset="UTF-8")
+    <!-- build:#{fileName} -->
+    script(src='/js/gt_analysis.js')
+    script(src='/js/jquery.js')
+    script(src='/js/component/jquery.placeholder.js')
+    script(src='/js/component/jquery.ajax.js')
+    script(src='/js/component/jquery.popup.js')
+    script(src='/js/component/jquery.cookie.js')
+    script(src='/js/template/tpl-guide.js')
+    script(src='/js/component/jquery.page.js')
+    block script
+    <!-- endbuild -->

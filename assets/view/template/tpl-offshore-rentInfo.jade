@@ -1,0 +1,22 @@
+div.wrap
+  h2.clearfix.title
+    span.pull-left
+      | [即派离岸外包服务]招聘专员
+    span.pull-right
+      | 服务费 : ￥#{rentInfo.price_base}元/月
+  ul.infos
+    li.city
+      em 所在城市 :
+      span #{rentInfo.city_name}
+    li.nums
+      em 租用数量 :
+      span #{rentInfo.rent_number}人
+    li.times
+      em 租用时长 :
+      span #{rentInfo.rent_month}个月
+  div.sum.clearfix
+    span.sum-label.pull-left 合计
+    span.sum-value.pull-right
+      span 服务费 :
+      em ￥#{rentInfo.price_final}
+      span 元

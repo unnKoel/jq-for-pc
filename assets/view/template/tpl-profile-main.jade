@@ -1,0 +1,118 @@
+div.item.base
+  h2#base
+    span.vertical
+    span 基础信息
+    i.icon.icon-arrows-declivity
+  div.content
+    div.above
+      ul.clearfix
+        li.pull-left.current.word-omit
+          span 目前在#{profile.city}工作，考虑#{profile.forward_city}
+        li.pull-left.native.word-omit
+          span 籍贯 :
+          em #{profile.native}
+        li.pull-left.dimission.word-omit
+          span 是否离职 :
+          em  #{profile.is_leave}
+    div.under
+      ul.clearfix
+        li.pull-left.cometo.word-omit
+          span 可到岗时间 :
+          em #{profile.arrival}
+        li.pull-left.marriage.word-omit
+          span 婚育状况 :
+          em #{profile.marry}
+        li.pull-left.eng.word-omit
+          span 英语能力 :
+          em #{profile.english_level}
+div.item.remark
+  h2#remark
+    span.vertical
+    span 顾问评语
+    i.icon.icon-arrows-declivity
+  div.content
+    ul
+      li.clearfix
+        span.dot.pull-left Office能力 :
+        em.pull-left #{profile.office_level}（#{profile.office_desc}）
+      li.clearfix
+        span.dot.pull-left 沟通能力 :
+        em.pull-left #{profile.communicate_level}（#{profile.communicate_desc}）
+    p !{profile.appraisal}
+div.item.jobs
+  h2#jobs
+    span.vertical
+    span 工作经历
+    i.icon.icon-arrows-declivity
+  div.content
+    each job in profile.job
+      div.job-item
+        div.first
+          span.cname.dot #{job.company_name}
+          span.number #{job.company_scale}
+          span.industry #{job.business}
+        div.second
+          span.bgtime #{job.begin_time}
+          span 至
+          span.endtime #{job.end_time}
+          span.range （#{job.range}）
+        ul.others
+          li
+            span 所在部门 :
+            em #{job.department}
+          li
+            span 职位名称 :
+            em #{job.position}
+          li
+            span 汇报对象 :
+            em #{job.supervisor}
+          li.salary
+            span 薪资范围 :
+            em #{job.salary_scope}
+          li.clearfix.duty
+            span.pull-left 工作职责 :
+            p.pull-left !{job.duty}
+div.item.edu
+  h2#edu
+    span.vertical
+    span 教育经历
+    i.icon.icon-arrows-declivity
+  div.content
+    each edu in profile.edu
+      div.edu-item
+        p.dot #{edu.education}
+        ul
+          li
+            span.school 学校 :
+            em #{edu.school_name}
+          li
+            span.time 时间 :
+            em #{edu.begin_time} ~ #{edu.end_time}
+          li
+            span.major 专业 :
+            em #{edu.major_name}
+          li
+            span.recruitment  统招 :
+            em #{edu.is_unified}
+div.item.skill
+  h2#skill
+    span.vertical
+    span 技能证书
+    i.icon.icon-arrows-declivity
+  div.content
+    ul
+      if profile.skills
+        each skill in profile.skills
+          li
+            span #{skill.name} :
+            em #{skill.ext}
+div.item.answer
+  h2#answer
+    span.vertical
+    span 你问我答
+    i.icon.icon-arrows-declivity
+  div.content
+    each qa in profile.qa
+      div.answer-item
+        p.dot Q : #{qa.question}
+        p.answer #{qa.answer}

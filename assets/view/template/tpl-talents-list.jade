@@ -1,0 +1,24 @@
+each talent in talents
+  div.item.clearfix(data-item=talent.id)
+    if talent.sex === '男'
+      img.favicon.pull-left(src='#{talent.pic || "/img/candidate_man.png"}')
+    else
+      img.favicon.pull-left(src='#{talent.pic || "/img/candidate_woman.png"}')
+    if talent.is_right === '1'
+      i.icon.icon-ji
+    div.info.pull-right
+      div.position-info.clearfix
+        span.word-omit.position.pull-left(title='#{talent.position}[#{talent.city}] #{talent.name}')
+          | <em>#{talent.position}[#{talent.city}]</em> #{talent.name}
+        span.word-omit.salary.pull-right(title='期望薪资￥#{talent.salary_month_expect}') 期望薪资￥#{talent.salary_month_expect}
+      div.personal-info.clearfix
+        span.word-omit.first.pull-left(title='#{talent.age}岁/#{talent.education}/经验#{talent.worktime}年')
+          | #{talent.age}岁/#{talent.education}/经验#{talent.worktime}年
+        span.word-omit.second.pull-left(title='英语#{talent.english}/沟通能力#{talent.communicate}/Office能力#{talent.office}')
+          | 英语#{talent.english}/沟通能力#{talent.communicate}/Office能力#{talent.office}
+        if talent.is_leave == '是'
+          span.word-omit.third.pull-left(title='已离职') 已离职
+        else
+          span.word-omit.third.pull-left(title='在职') 在职
+      div.comments-info.clearfix(title=talent.appraisal)
+        span.word-omit.pull-left 顾问评语：#{talent.appraisal}
